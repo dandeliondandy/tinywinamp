@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TinyWinamp</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="winamp">
+    <div id="title-bar">
+      TinyWinamp
+    </div>
+
+    <div id="controls">
+      <button id="playBtn">Play</button>
+      <button id="pauseBtn">Pause</button>
+      <button id="stopBtn">Stop</button>
+      <button id="prevBtn">Prev</button>
+      <button id="nextBtn">Next</button>
+      <button id="shuffleBtn">Shuffle</button>
+      <label for="fileInput" class="file-button">Choose Files</label>
+      <input type="file" id="fileInput" multiple accept=".mp3">
+      <span id="fileCount">0 files</span>
+    </div>
+
+    <div id="time-display">
+      <span id="currentTime">0:00</span> / <span id="totalDuration">0:00</span>
+    </div>
+
+    <div id="progress-bar-container">
+      <div id="progress-bar"></div>
+    </div>
+
+    <div id="playlist" ondrop="dropHandler(event)" ondragover="dragOverHandler(event)">
+      <ul></ul>
+    </div>
+
+    <audio id="audioPlayer"></audio>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
